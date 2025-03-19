@@ -43,7 +43,7 @@ java GuessTheNumber
 
 
 
-##✊ 2. Rock, Paper, Scissors Game
+✊ 2. Rock, Paper, Scissors Game
 
 - ### 📚 Description
 - RPS.java is a simple Java console game where the user plays Rock, Paper, Scissors against the computer.
