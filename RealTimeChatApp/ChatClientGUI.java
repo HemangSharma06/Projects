@@ -8,7 +8,7 @@ import java.io.*;
 import java.net.*;
 
 public class ChatClientGUI extends Application {
-    private static final String SERVER_ADDRESS = "192.168.1.4";
+    private static final String SERVER_ADDRESS = "Enter ip of Server laptop";
     private static final int SERVER_PORT = 12345;
     
     private TextArea messageArea;
