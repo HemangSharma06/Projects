@@ -2,7 +2,7 @@
 # 🎯 Project Overview:
 The Library Management System is a web-based application that simplifies the management of library operations. This system automates the process of tracking books, managing user information, and overseeing borrowing/returning processes, making it easier for administrators to maintain library records efficiently.
 
-##🔥 Key Features:
+#🔥 Key Features:
 #✅ User Management:
 
 Register, update, and delete user profiles.
@@ -19,12 +19,12 @@ Calculate fines for overdue books.
 
 Secure admin login to manage library records.
 Generate reports and audit transactions.
-##🛠️ Technologies Used:
+#🛠️ Technologies Used:
 #Frontend: HTML, CSS, JavaScript
 #Backend: Flask (Python Framework)
 #Database:MySQL
 #Version Control: Git & GitHub
-##🚀 How It Works:
+#🚀 How It Works:
 #Admin Login:
 Admins can log in and manage books, users, and transactions.
 
