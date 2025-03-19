@@ -1,24 +1,3 @@
-# Project Structure
-Caculator/
-├── APK/
-│   └── calculator.apk  (Compiled APK for Android devices)
-└── Calculator7/
-    ├── .idea/                  (IDE configuration files)
-    ├── app/
-    │   ├── build.gradle.kts     (App-level Gradle configuration)
-    │   ├── src/
-    │   │   ├── androidTest/
-    │   │   │   └── ExampleInstrumentedTest.java
-    │   │   ├── main/
-    │   │   │   ├── java/com/example/calc/
-    │   │   │   │   ├── FirstScreen.java
-    │   │   │   │   └── MainActivity.java
-    │   │   │   └── res/         (UI and resource files)
-    │   │   └── test/
-    │   │       └── ExampleUnitTest.java
-    ├── build.gradle.kts
-    └── settings.gradle.kts
-
 # Calculator Application
 
 This project contains an Android calculator application.
