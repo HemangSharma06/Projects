@@ -1,16 +1,38 @@
-# Calculator Application
+## 📱 Calculator Application - About
 
-This project contains an Android calculator application.
+### 🎯 Project Overview:
+The Calculator Application is an Android-based mobile app that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It features an intuitive and responsive user interface.
 
-## Structure
-- `APK/` - Contains the built APK files for the application.
-- `Calculator7/` - Contains the Android Studio project files with source code.
+---
 
-## How to Run
-1. Open `Calculator7/` in Android Studio.
-2. Build and run the project using an emulator or physical device.
-3. The APK can be installed directly from the `APK/` folder.
+### 🔥 Key Features:
+✅ **Basic Arithmetic Operations:**
+- Perform addition, subtraction, multiplication, and division.
+- Error handling for invalid inputs.
 
-## Features
-- Basic calculator operations (addition, subtraction, multiplication, division).
-- User-friendly UI for easy navigation.
+✅ **User Interface:**
+- Clean and responsive design.
+- Easy-to-use buttons and number pad.
+
+✅ **Advanced Functions (Optional):**
+- Memory functions to store and retrieve values.
+- Option to clear input and reset the calculator.
+
+---
+
+### 🛠️ Technologies Used:
+- **Language:** Java
+- **Framework:** Android Studio
+- **Version Control:** Git & GitHub
+
+---
+
+### 🚀 How It Works:
+1. **Open the App:**  
+   Launch the calculator from the mobile device.
+
+2. **Perform Calculations:**  
+   Enter numbers and select the desired operation.
+
+3. **View Results:**  
+   The calculated result is displayed on the screen.
