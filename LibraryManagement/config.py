@@ -8,8 +8,8 @@ load_dotenv()
 # Database Configuration from Environment Variables
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_USER = os.getenv("DB_USER", "root")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "Hemang@2006")
-DB_NAME = os.getenv("DB_NAME", "librarymanagement")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "Enter Password")
+DB_NAME = os.getenv("DB_NAME", "Enter Database Name")
 
 # Function to establish a database connection
 def get_db_connection():
