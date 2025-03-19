@@ -4,8 +4,8 @@ FROM openjdk:22
 # Set the working directory
 WORKDIR /app
 
-# Install wget and unzip before downloading JavaFX
-RUN apt-get update && apt-get install -y wget unzip
+# Install wget and unzip using apk for Alpine
+RUN apk update && apk add wget unzip
 
 # Download and extract JavaFX 23.0.2
 RUN wget https://download2.gluonhq.com/openjfx/23.0.2/openjfx-23.0.2_linux-x64_bin-sdk.zip \
