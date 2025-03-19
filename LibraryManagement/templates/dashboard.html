@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .dashboard-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .book-card {
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Library System</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="container">
+        <div class="dashboard-container">
+            <h2 class="text-center">Welcome, {{ user_name }}</h2>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+          
+            <!-- Search Books -->
+            <div class="mt-4">
+                <h4>Search Books</h4>
+                <form action="/search" method="GET">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="query" placeholder="Enter book title or author">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Available Books for Issuing -->
+            <div class="mt-4">
+                <h4>Available Books</h4>
+                <div id="available-books">
+                    {% for book in available_books %}
+                        <div class="book-card">
+                            <strong>{{ book.Book_Name }}</strong> by {{ book.author }}  
+                            <p><em>Copies available:</em> {{ book.Available }}</p>
+                            <form action="/issue" method="POST">
+                                <input type="hidden" name="book_id" value="{{ book.Book_ID }}">
+                                <button type="submit" class="btn btn-success">Issue Book</button>
+                            </form>
+                        </div>
+                    {% endfor %}
+                    {% if not available_books %}
+                        <p>No books available for issuing.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Issued Books -->
+            <div class="mt-4">
+                <h4>Your Issued Books</h4>
+                <div id="issued-books">
+                    {% for book in issued_books %}
+                        <div class="book-card">
+                            <strong>{{ book.Book_Name }}</strong> by {{ book.author }}  
+                            <p>Return Date: {{ book.Return_Date }}</p>
+                            <form action="/return" method="POST">
+                                <input type="hidden" name="book_id" value="{{ book.Book_ID }}">
+                                <input type = "hidden" name = "transaction_id" value = "{{ book.Transaction_ID}}">
+                                <button type="submit" class="btn btn-danger">Return Book</button>
+                            </form>
+                        </div>
+                    {% endfor %}
+                    {% if not issued_books %}
+                        <p>No books issued.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

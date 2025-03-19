@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User - Library System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Delete User</h2>
+        <p>Are you sure you want to delete the user <strong>{{ user.User_Name }}</strong>?</p>
+        <form action="/delete_user/{{ user.User_ID }}" method="POST">
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a href="/admin_dashboard" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+
+</body>
+</html>

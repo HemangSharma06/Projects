@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Library System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .admin-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .action-btns button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Library Admin Panel</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard Container -->
+    <div class="container">
+        <div class="admin-container">
+            <h2 class="text-center">Admin Dashboard</h2>
+
+            <!-- Manage Books Section -->
+            <div class="mt-4">
+                <h4>Manage Books</h4>
+                <form action="/add_book" method="POST" class="mb-3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" name="title" placeholder="Book Title" required>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" name="author" placeholder="Author" required>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" name="quantity" placeholder="Quantity" required>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-success">Add Book</button>
+                        </div>
+                    </div>
+                </form>
+
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Book ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Available Copies</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for book in books %}
+                        <tr>
+                            <td>{{ book.Book_ID }}</td>
+                            <td>{{ book.Book_Name }}</td>
+                            <td>{{ book.Author }}</td>
+                            <td>{{ book.Available }}</td>
+                            <td class="action-btns">
+                                <form action="/delete_book" method="POST" style="display:inline;">
+                                    <input type="hidden" name="book_id" value="{{ book.Book_ID }}">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                                <form action="/update_book/{{ book.Book_ID }}" method="POST" style="display:inline;">
+                                    <button type="submit" class="btn btn-warning btn-sm">Update</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Manage Issued Books -->
+            <div class="mt-4">
+                <h4>Issued Books</h4>
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>User</th>
+                            <th>Book</th>
+                            <th>Issue Date</th>
+                            <th>Return Date</th>
+                            <th>Late Fee</th>
+                            <th>Status</th>
+                            <th>Due Days</th>
+                            <th>Total Charge</th>
+                            <th>Payable Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for transaction in transactions %}
+                        <tr>
+                            <td>{{ transaction.Transaction_ID }}</td>
+                            <td>{{ transaction.Member_ID }}</td>
+                            <td>{{ transaction.Book_ID }}</td>
+                            <td>{{ transaction.Issue_Date }}</td>
+                            <td>{{ transaction.Return_Date }}</td>
+                            <td>{{ transaction.late_fee }}</td>
+                            <td>
+                                {% if transaction.Status == 'Pending' %}
+                                    <span class="badge bg-warning">{{ transaction.Status }}</span>
+                                {% else %}
+                                    <span class="badge bg-success">{{ transaction.Status }}</span>
+                                {% endif %}
+                            </td>
+                            <td>{{ transaction.Due_Days }}</td>
+                            <td>{{ transaction.Total_charge }}</td>
+                            <td>{{ transaction.Payable_Amount }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Manage Users -->
+            <div class="mt-4">
+                <h4>Manage Users</h4>
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Contact Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td>{{ user.User_ID }}</td>
+                            <td>{{ user.User_Name }}</td>
+                            <td>{{ user.User_Mail }}</td>
+                            <td>{{ user.User_Password }}</td>
+                            <td>{{ user.Contact }}</td>
+                            <td>
+                                <form action="/delete_user" method="POST" style="display:inline;">
+                                    <input type="hidden" name="user_id" value="{{ user.User_ID}}">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

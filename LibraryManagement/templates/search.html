@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h2>Search for a Book</h2>
+    
+    <form action="{{ url_for('search') }}" method="POST">
+        <input type="text" name="query" placeholder="Enter book title..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if books %}
+        <h3>Search Results:</h3>
+        <ul>
+            {% for book in books %}
+                <li>{{ book['title'] }} by {{ book['author'] }}</li>
+            {% endfor %}
+        </ul>
+    {% elif query %}
+        <p>No results found for "{{ query }}".</p>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+
+
+
+
+
+
+
+
+
+
+Q1: Look at this series: F2, __, D8, C16, B32, ... What number should fill the blank?
+
+(A) A16
+(B) G4
+(C) E4
+(D) E3
+
+
+The Answer is C.
+
+Q2: Look at this series: 664, 332, 340, 170, ____, 89, ... What number should fill the blank?
+
+(A) 85
+(B) 97
+(C) 109
+(D) 178
+
+
+The Answer is D.
+
+Q3: Arrange the following words according to the dictionary.
+1. Intricate 2. Interview 3. Intransigent 4. Interrogation 5. Intravenous 
+
+(A) 2,4,5,3,1
+(B) 5,3,1,2,4
+(C) 4,2,3,5,1
+(D) 3,5,2,1,4
+
+The Answer is C.
+
+Q4: How many can meaningful words be obtained using the letters of the word IDET, where each letter should be used only once in a word?
+
+(A) Not any
+(B) One
+(C) Two
+(D) More then two
+
+The Answer is D.
+
+
+Q5: Which of the following words cannot be made from "EXEMPLIFICATION"?
+
+(A) FIXATION
+(B) EXAMPLE
+(C) AXE
+(D) EXTRA
+
+The Answer is D.
+
+
+Q6: SCD, TEF, UGH, ____, WKL
+
+(A) CMN
+(B) UJI
+(C) VIJ
+(D) IJT
+
+The Answer is C.
+
+
+Q7: In a deck of 52 cards, what is the probability of getting a face card?
+
+(A) 4/13
+(B) 3/13
+(C) 2/13
+(D) 5/13
+
+
+The Answer is B.
+
+Q8: A triangle have base of 10 cm and height of 5 cm, What is the area of triangle?
+
+(A) 20 sq. cm
+(B) 25 sq. cm
+(C) 30 sq. cm
+(D) 35 sq. cm
+
+
+The Answer is B.
+
+Q9: If a car travels 50 miles in 1 hour, how far does it travel in 3 hours?**
+(A) 100 miles
+(B) 150 miles
+(C) 200 miles
+(D) 250 miles
+
+
+The Answer is B.
+
+
+Q10: Look at this series: 31, 29, 24, 22, 17, ... What number should come next?
+
+(A) 15
+(B) 14
+(C) 13
+(D) 12
+
+The Answer is A.
+
+
+Q11: Look at this series: 201, 202, 204, 207, ... What number should come next?
+
+(A) 205
+(B) 208
+(C) 210
+(D) 211
+
+The Answer is D.
+
+
+Q12: 42 40 38 35 33 31 28 ... What number should come next?
+
+(A) 25 22
+(B) 26 23
+(C) 26 24
+(D) 25 23
+
+The Answer is C.
+
+
+Q13: 5 25 625 3125 ... What number should come next?
+
+(A) 15225
+(B) 15625
+(C) 15725
+(D) 15425
+
+The Answer is B.
+
+
+Q14: 2 2 6 14 30 ... What number should come next?
+
+(A) 62
+(B) 64
+(C) 60
+(D) 54
+
+The Answer is A.
+
+
+Q15: 1 1 4 27 ____ 3125 46656. What number should come next?
+
+(A) 182
+(B) 256
+(C) 576
+(D) 225
+
+The Answer is B.
+
+
+Q16: 2 3 5 7 11 13 17 19 23 ___. What number should come next?
+
+(A) 29
+(B) 31
+(C) 27
+(D) 35
+
+The Answer is A.
+
+
+Q17: To correct the given equation, which two symbols have to be interchanged?
+(9 + 8)/(4 x 15 - 6) = 5.13
+
+(A) - and +
+(B) + and x
+(C) / and +
+(D) / and x
+
+The Answer is D.
+
+Q18: If '+' means 'x' and '/' means '-' then what is the value of 82 / 12 + 2 x 20 - 5?
+
+(A) -92
+(B)  112
+(C) -403
+(D) -115
+
+The Answer is C.
+
+
+Q19: Which of the following statements is used to allocate memory dynamically in C++?
+
+(A) malloc()  
+(B) new  
+(C) Delete  
+(D) create  
+
+
+The Answer is B.
+
+Q20: What is the probablity of getting a prime number from first 100 natural numbers?
+
+(A) 1/4 or 0.25
+(B) 27/100 or 0.27
+(C) 6/25 or 0.24
+(D) 2/5 or 0.2
+
+
+The Answer is A.
+
+Q21: Which of the following statements about constructor is true?
+
+(A)Constructors can have return types.
+(B) A class can have multiple constructors with different parameters.
+(C) Constructors cannot be overloaded.
+(D) Constructors are called explicitly.
+
+
+The Answer is B.
+
+Q22: Which of the following is a valid identifier in C++?
+
+(A) 1stVariable
+(B) variable-name
+(C) variable_name
+(D) variable name
+
+
+The Answer is C.
+
+Q23: What will be the output of the following c++ statements?
+    int a = 5;
+    cout << ++a + a++ << endl;
+(A) 11
+(B) 12
+(C) 10
+(D) Compilation error
+
+The Answer is B.
+
+Q24: What is the purpose of the 'virtual' keyword in C++?
+    -
+(A) To declare a variable
+(B) To define a constant
+(C) To enable polymorphism
+(D) To create a template
+
+
+The Answer is C.
+
+Q25: What is the output of the following c++ statements?
+    int x = 5;
+    cout << x++ << " " << ++x;
+(A) 5 7  
+(B) 5 6  
+(C) 6 7  
+(D) 6 6  
+
+The Answer is A.
+
+Q26: Which of the following is true about function overloading?
+
+(A) Function overloading requires that all functions have different names.  
+(B) Function overloading allows functions to have the same name but different parameters.  
+(C) Function overloading is not allowed in C++.  
+(D) Function overloading only works with constructors.  
+
+
+The Answer is B.
+
+Q27: What will happen if you try to access an element outside the bounds of an array in C++?
+
+(A) The program will crash.  
+(B) It will throw an exception.    
+(C) It will return a random value. 
+(D) It will print an error message.  
+
+
+The Answer is C.
+
+Q28: What does the public access specifier do? 
+
+(A) Restricts access to the class
+(B) Allows access from outside the class
+(C) Allows access only to derived classes
+(D) Denies access to derived classes
+
+
+The Answer is B.
+
+Q29: What is the incorrect syntax to declare a user defined function in C++?
+
+(A) int function(int a,float b);
+(B) float func(float p);
+(C) void main();
+(D) int myfunc();
+
+
+The Answer is C.
+
+Q30:In C++, which of the following keywords is used to handle exceptions?
+
+(A) try  
+(B) catch  
+(C) throw  
+(D) All of the above  
+
+
+The Answer is D.
