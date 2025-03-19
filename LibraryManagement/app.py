@@ -4,7 +4,7 @@ import mysql.connector
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-app.secret_key = "test@test123@000"
+app.secret_key = "Enter Secret Key"
 
 # Database Connection
 def get_db_connection():
@@ -12,8 +12,8 @@ def get_db_connection():
         return mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Hemang@2006",
-            database="librarymanagement"
+            password="Enter Password",
+            database="Enter Database name"
         )
     except mysql.connector.Error as err:
         print(f"Database Connection Error: {err}")
