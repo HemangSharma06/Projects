@@ -53,7 +53,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.App</mainClass>
+                            <mainClass>com.example.ChatClientGUI</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
