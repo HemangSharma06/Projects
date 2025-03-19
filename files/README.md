@@ -8,8 +8,8 @@ This repository contains two fun Java-based console games:
 
 ## 📄 1. Guess The Number Game
 
-### 📚 Description
-**GuessTheNumber.java** is a Java console-based game where the user tries to guess a randomly generated number between 1 and 50.  
+- ### 📚 Description
+- **GuessTheNumber.java** is a Java console-based game where the user tries to guess a randomly generated number between 1 and 50.  
 - The program provides hints to the user by indicating whether the guessed number is too high or too low.
 
 ---
@@ -43,10 +43,11 @@ java GuessTheNumber
 
 
 
-✊ 2. Rock, Paper, Scissors Game
-📚 Description
-RPS.java is a simple Java console game where the user plays Rock, Paper, Scissors against the computer.
-The game randomly selects the computer's choice, and the result is determined based on the standard rules of the game.
+##✊ 2. Rock, Paper, Scissors Game
+
+- ### 📚 Description
+- RPS.java is a simple Java console game where the user plays Rock, Paper, Scissors against the computer.
+- The game randomly selects the computer's choice, and the result is determined based on the standard rules of the game.
 
 🛠️ How to Run
 Compile the Java file:
