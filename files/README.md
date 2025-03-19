@@ -10,7 +10,7 @@ This repository contains two fun Java-based console games:
 
 ### 📚 Description
 **GuessTheNumber.java** is a Java console-based game where the user tries to guess a randomly generated number between 1 and 50.  
-The program provides hints to the user by indicating whether the guessed number is too high or too low.
+- The program provides hints to the user by indicating whether the guessed number is too high or too low.
 
 ---
 
@@ -19,22 +19,22 @@ The program provides hints to the user by indicating whether the guessed number 
 ```bash
 javac GuessTheNumber.java
 ```
-Run the compiled class:
+- Run the compiled class:
 ```bash
 java GuessTheNumber
 ```
-📌 Game Instructions
-You have to guess a number between 1 and 50.
-If your guess is less than the target number, the program will prompt that the guessed number is too low.
-If your guess is greater than the target number, it will indicate that the number is too high.
-You will be awarded stars based on the number of tries:
-⭐ 1 Star for 13-20 tries.
-⭐⭐ 2 Stars for 7-12 tries.
-⭐⭐⭐ 3 Stars for 1-6 tries.
-❌ No stars if it takes more than 20 tries.
-🔄 Play Again
-After finishing the game, type yes to play again.
-Type anything else to exit the game.
+- 📌 Game Instructions
+- You have to guess a number between 1 and 50.
+- If your guess is less than the target number, the program will prompt that the guessed number is too low.
+- If your guess is greater than the target number, it will indicate that the number is too high.
+- You will be awarded stars based on the number of tries:
+- ⭐ 1 Star for 13-20 tries.
+- ⭐⭐ 2 Stars for 7-12 tries.
+- ⭐⭐⭐ 3 Stars for 1-6 tries.
+- ❌ No stars if it takes more than 20 tries.
+- 🔄 Play Again
+- After finishing the game, type yes to play again.
+- Type anything else to exit the game.
 
 
 
