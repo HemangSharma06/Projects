@@ -56,4 +56,3 @@ The winner is displayed after each round.
 🔄 Play Again
 The user can choose to play multiple rounds.
 After finishing, type yes to play again or anything else to quit.
-not formatting document in preview
