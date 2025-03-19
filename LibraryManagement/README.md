@@ -2,7 +2,7 @@
 # 🎯 Project Overview:
 The Library Management System is a web-based application that simplifies the management of library operations. This system automates the process of tracking books, managing user information, and overseeing borrowing/returning processes, making it easier for administrators to maintain library records efficiently.
 
-#🔥 Key Features:
+#🔥 Key Features: \r\n
 #✅ User Management:
 
 Register, update, and delete user profiles.
