@@ -3,13 +3,14 @@ import java.net.*;
 import java.util.*;
 
 public class Chatserver {
-    private static final int PORT = 12345;
+    private static final int PORT = 5000;
     private static Set<PrintWriter> clientWriters = new HashSet<>();
     private static Map<String, PrintWriter> users = new HashMap<>();
 
     public static void main(String[] args) {
         System.out.println("Chat Server started... waiting for the clients....");
-        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
+        try {
+            ServerSocket serverSocket = new ServerSocket(PORT, 50, InetAddress.getByName("0.0.0.0"));
             while (true) {
                 new ClientHandler(serverSocket.accept()).start();
             }
