@@ -3,7 +3,7 @@ import mysql.connector
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-app.secret_key = "test@test123@000"
+app.secret_key = "Enter Secret Key"
 
 redirect('admin.html')
 if __name__ == '__main__':
