@@ -1,11 +1,14 @@
-# Use OpenJDK 22 as the base image
+# Use OpenJDK 22 as base image
 FROM openjdk:22
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy all compiled .class files to the container
-COPY ./out/ ./
+# Copy source code into the container
+COPY ./src/ /app/src
+
+# Compile Java code
+RUN javac -d /app/out /app/src/*.java
 
 # Start the Chatserver
-CMD ["java", "Chatserver"]
+CMD ["java", "-cp", "/app/out", "Chatserver"]
