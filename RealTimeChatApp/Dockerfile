@@ -1,8 +1,22 @@
-# Use a Debian-based OpenJDK image
+FROM maven:3.9-eclipse-temurin-22 AS build
+
+# Set working directory for building
+WORKDIR /app
+
+# Copy all files for building the project
+COPY . /app
+
+# Build the jar file
+RUN mvn clean package
+
+# Use a slim OpenJDK image to run the jar
 FROM openjdk:22-slim
 
-# Set working directory
+# Set working directory for running the app
 WORKDIR /app
+
+# Copy built jar from Maven stage to final image
+COPY --from=build /app/target/chatapp.jar /app/chatapp.jar
 
 # Install required tools
 RUN apt-get update && apt-get install -y wget unzip
@@ -15,11 +29,5 @@ RUN wget https://download2.gluonhq.com/openjfx/23.0.2/openjfx-23.0.2_linux-x64_b
 # Set environment variable for JavaFX modules
 ENV PATH_TO_FX=/app/javafx-sdk-23.0.2/lib
 
-# Copy your project files (chatapp.jar should be built and available in the root folder)
-COPY . /app
-
-# Make sure chatapp.jar exists (for debugging only, can be removed after verification)
-RUN ls -l /app
-
-# Correct path to run the JAR file
+# Run the jar with JavaFX
 CMD ["java", "--module-path", "/app/javafx-sdk-23.0.2/lib", "--add-modules", "javafx.controls,javafx.fxml", "-jar", "/app/chatapp.jar"]
