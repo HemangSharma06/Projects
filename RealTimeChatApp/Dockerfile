@@ -1,10 +1,15 @@
+# Use a Maven-based image to build the jar
 FROM maven:3.9-eclipse-temurin-22 AS build
 
 # Set working directory for building
 WORKDIR /app
 
-# Copy all files for building the project
-COPY . /app
+# Copy pom.xml and source code separately to leverage Docker cache
+COPY pom.xml /app/
+RUN mvn dependency:go-offline
+
+# Copy the source code
+COPY src /app/src
 
 # Build the jar file
 RUN mvn clean package
