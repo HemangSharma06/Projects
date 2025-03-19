@@ -73,10 +73,10 @@ java RPS
 - Scissors beats Paper.
 - Paper beats Rock.
 - The winner is displayed after each round.
-🔄 Play Again
+- 🔄 Play Again
 - The user can choose to play multiple rounds.
 - After finishing, type yes to play again or anything else to quit.
-🚀 Additional Notes
+- 🚀 Additional Notes
 - Both programs provide a fun and interactive console-based gaming experience.
 - Make sure to run the files with a compatible Java Development Kit (JDK).
 
