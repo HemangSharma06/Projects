@@ -1,11 +1,11 @@
-# Use OpenJDK 22 as the base image
+# Use OpenJDK 22 as the base image (Debian-based)
 FROM openjdk:22
 
 # Set the working directory
 WORKDIR /app
 
-# Install wget and unzip using apk for Alpine
-RUN apk update && apk add wget unzip
+# Install wget and unzip using apt-get
+RUN apt-get update && apt-get install -y wget unzip
 
 # Download and extract JavaFX 23.0.2
 RUN wget https://download2.gluonhq.com/openjfx/23.0.2/openjfx-23.0.2_linux-x64_bin-sdk.zip \
