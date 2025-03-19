@@ -52,32 +52,32 @@ java GuessTheNumber
   
 ---
 
-🛠️ How to Run
-Compile the Java file:
+- 🛠️ How to Run
+- Compile the Java file:
 ```bash
 javac RPS.java
 ```
 
-Run the compiled class:
+- Run the compiled class:
 ```bash
 java RPS
 ```
 📌 Game Instructions
-Choose between:
-✊ Rock
-📄 Paper
-✂️ Scissors
-The computer will randomly choose one of the options.
-The game follows these rules:
-Rock beats Scissors.
-Scissors beats Paper.
-Paper beats Rock.
-The winner is displayed after each round.
+- Choose between:
+- ✊ Rock
+- 📄 Paper
+- ✂️ Scissors
+- The computer will randomly choose one of the options.
+- The game follows these rules:
+- Rock beats Scissors.
+- Scissors beats Paper.
+- Paper beats Rock.
+- The winner is displayed after each round.
 🔄 Play Again
-The user can choose to play multiple rounds.
-After finishing, type yes to play again or anything else to quit.
+- The user can choose to play multiple rounds.
+- After finishing, type yes to play again or anything else to quit.
 🚀 Additional Notes
-Both programs provide a fun and interactive console-based gaming experience.
-Make sure to run the files with a compatible Java Development Kit (JDK).
+- Both programs provide a fun and interactive console-based gaming experience.
+- Make sure to run the files with a compatible Java Development Kit (JDK).
 
 ---
