@@ -2,24 +2,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
-    <!-- Project metadata -->
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example</groupId>  <!-- Group ID (like package name) -->
-    <artifactId>chatapp</artifactId> <!-- Name of the project -->
-    <version>1.0.0</version>          <!-- Project version -->
-    <name>Chat Application</name>
 
-    <!-- Packaging type (jar/war) -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>chatapp</artifactId>
+    <version>1.0.0</version>
+    <name>Chat Application</name>
     <packaging>jar</packaging>
 
-    <!-- Specify Java version -->
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
         <maven.compiler.target>22</maven.compiler.target>
     </properties>
 
-    <!-- Dependencies -->
     <dependencies>
         <!-- JavaFX -->
         <dependency>
@@ -34,9 +29,9 @@
         </dependency>
     </dependencies>
 
-    <!-- Maven build plugin to create jar -->
     <build>
         <plugins>
+            <!-- Compile Java -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -46,6 +41,8 @@
                     <target>22</target>
                 </configuration>
             </plugin>
+
+            <!-- Package Jar -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -53,7 +50,11 @@
                 <configuration>
                     <archive>
                         <manifest>
+<<<<<<< HEAD
                             <mainClass>com.example.ChatClientGUI</mainClass>
+=======
+                            <mainClass>RealTimeChatApp.ChatClientGUI</mainClass>
+>>>>>>> bde8a1d (Commit For Amazon Sales Review)
                         </manifest>
                     </archive>
                 </configuration>
