@@ -1,6 +1,11 @@
 import streamlit as st
 import numpy as np
-import joblib
+try:
+    import joblib
+except ImportError:
+    import os
+    os.system('pip install joblib')
+    import joblib
 model = joblib.load("fraud_rf_model.pkl")
 
 st.title("Credit Card Fraud Detection")
