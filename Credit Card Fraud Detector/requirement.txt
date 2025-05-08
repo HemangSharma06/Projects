@@ -5,3 +5,4 @@ scikit-learn
 imblearn
 matplotlib
 seaborn
+joblib
