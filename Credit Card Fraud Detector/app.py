@@ -4,7 +4,7 @@ try:
     import joblib
 except ImportError:
     import os
-    os.system('pip install joblib')
+    os.system('pip install --user joblib')
     import joblib
 model = joblib.load("fraud_rf_model.pkl")
 
