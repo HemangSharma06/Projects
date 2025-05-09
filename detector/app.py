@@ -1,15 +1,8 @@
 import streamlit as st
 import numpy as np
-<<<<<<< HEAD
-import joblib 
-from pathlib import Path
-
-=======
 import joblib
 from pathlib import Path
 
-
->>>>>>> bd941b4 (Updated files)
 @st.cache_resource
 def load_model():
     try:
@@ -22,10 +15,6 @@ def load_model():
         st.error(f"Model loading failed: {str(e)}")
         st.stop()
 
-<<<<<<< HEAD
-=======
-
->>>>>>> bd941b4 (Updated files)
 model = load_model()
 
 st.title("Credit Card Fraud Detection")
@@ -42,26 +31,14 @@ input_data.append(amount)
 
 if st.button("Predict"):
     features = np.array(input_data).reshape(1, -1)
-<<<<<<< HEAD
     
     try:
         prediction = model.predict(features)[0]
         prob = model.predict_proba(features)[0][1]
         
-=======
-
-    try:
-        prediction = model.predict(features)[0]
-        prob = model.predict_proba(features)[0][1]
-
->>>>>>> bd941b4 (Updated files)
         if prediction == 1:
             st.error(f"Fraudulent Transaction Detected! (Probability: {prob:.2%})")
         else:
             st.success(f"Legitimate Transaction (Probability of Fraud: {prob:.2%})")
     except Exception as e:
-<<<<<<< HEAD
         st.error(f"Prediction failed: {str(e)}")
-=======
-        st.error(f"Prediction failed: {str(e)}")
->>>>>>> bd941b4 (Updated files)
