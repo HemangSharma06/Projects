@@ -20,7 +20,7 @@ model = load_model()
 st.title("Credit Card Fraud Detection")
 st.markdown("Enter transaction details below to predict if it's fraudulent.")
 
-n_features = model.n_features_in_ if hasattr(model, 'n_features_in_') else 30
+n_features = model.n_features_in_ - 1
 input_data = []
 for i in range(1, n_features + 1):
     val = st.number_input(f"V{i}", value=0.0, format="%.5f")
