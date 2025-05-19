@@ -1,0 +1,219 @@
+body {
+    background-color: paleturquoise;
+}
+@keyframes pastelGlowCycle {
+    0% {
+        background-color: #92b8d9;  
+        color: #1a237e;
+    }
+    10% {
+        background-color: #a488e1;  
+        color: #1b5e20;
+    }
+    20% {
+        background-color: #f5d393;  
+        color: #ff8f00;
+    }
+    30% {
+        background-color: #e77599; 
+        color: #ad1457;
+    }
+    40% {
+        background-color: #a28ae3; 
+        color: #6a1b9a;
+    }
+    50% {
+        background-color: #7ab7eb;
+        color: #0d47a1;
+    }
+    60% {
+        background-color: #987aed;
+        color: #6a1b9a;
+    }
+    70% {
+        background-color: #eb6791;
+        color: #ad1457;
+    }
+    80% {
+        background-color: #eabd69;
+        color: #ff8f00;
+    }
+    90% {
+        background-color: #9f80e1;
+        color: #1b5e20;
+    }
+    100% {
+        background-color: #91c2ed;
+        color: #1a237e;
+    }
+}
+@keyframes lightVibrantCycle {
+    0% {
+        background-color: #2a2d36;
+        color: #00e5ff;
+    }
+    10% {
+        background-color: #2a2d36;
+        color: #6eff87;
+    }
+    20% {
+        background-color: #343a4a;
+        color: #ffe066;
+    }
+    30% {
+        background-color: #343a4a;
+        color: #ff6b9d;
+    }
+    40% {
+        background-color: #3d2a50;
+        color: #c792ea;
+    }
+    50% {
+        background-color: #3d2a50;
+        color: #00e5ff;
+    }
+    60% {
+        background-color: #3d2a50;
+        color: #c792ea;
+    }
+    70% {
+        background-color: #343a4a;
+        color: #ff6b9d;
+    }
+    80% {
+        background-color: #343a4a;
+        color: #ffe066;
+    }
+    90% {
+        background-color: #2a2d36;
+        color: #6eff87;
+    }
+    100% {
+        background-color: #3d2a50;
+        color: #00e5ff;
+    }
+}
+@keyframes vibrantCycle {
+    0% {
+        background-color: #121212;
+        color: #00ffff;
+    }
+
+    9.1% {
+        background-color: #121212;
+        color: #39ff14;
+    }
+
+    18.2% {
+        background-color: #0a0a3d;
+        color: #ffea00;
+    }
+
+    27.3% {
+        background-color: #0a0a3d;
+        color: #ff1493;
+    }
+
+    36.4% {
+        background-color: #1a0033;
+        color: #8a2be2;
+    }
+
+    45.5% {
+        background-color: #1a0033;
+        color: #00ffff;
+    }
+
+    54.4% {
+        background-color: #1a0033;
+        color: #8a2be2;
+    }
+
+    63.3% {
+        background-color: #0a0a3d;
+        color: #ff1493;
+    }
+
+    72.2% {
+        background-color: #0a0a3d;
+        color: #ff1493;
+    }
+
+    81.1% {
+        background-color: #0a0a3d;
+        color: #ffea00;
+    }
+
+    91% {
+        background-color: #121212;
+        color: #39ff14;
+    }
+
+    100% {
+        background-color: #1a0033;
+        color: #00ffff;
+    }
+}
+
+.half-width {
+    padding: 5px;
+    border-radius: 15px;
+    margin: auto;
+    font-size: 250%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 60vw;
+    animation: vibrantCycle 5s 0s infinite ease-in-out;
+}
+
+.form-container1 {
+    width: 58vw;
+    animation: lightVibrantCycle 5s 0s infinite linear;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    font-size: 120%;
+    margin-bottom: 30px;
+    margin: auto;
+    text-align: left;
+}
+
+#predict-form {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 120%;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    text-align: left;
+}
+
+input {
+    animation: pastelGlowCycle 5s 0s infinite ease-in-out;
+    padding: 10px;
+    border: none;
+    font-size: 120%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+#btn1, #btn2, #btn3{
+    background-color: #212121;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 75%;
+    color: cyan;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    width: 8vw;
+}
+
+label {
+    font-weight: bold;
+}
