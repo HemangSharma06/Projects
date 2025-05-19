@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+
+    <div class="Error-box">
+        <h1>
+            Error: Unable to Predict 
+            This website does not contain the data for stock you entered
+        </h1>
+        <a class="back-button" id = "Back2" href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+
+</body>
+</html>

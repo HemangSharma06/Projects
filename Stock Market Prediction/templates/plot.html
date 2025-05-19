@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Forecast Plot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <div class="plot-box">
+        <h1>Stock Forecast Plot for {{ name }}</h1>
+        <img src="{{ url_for('static', filename='plot.png') }}" alt="Stock Forecast Plot" style="width: 80%; height: auto; border: 2px solid #00ffff; padding: 10px;">
+        <br><br>
+        <a class="back-button" id = "Back3" href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>
