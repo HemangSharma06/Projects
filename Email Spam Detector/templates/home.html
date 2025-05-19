@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    
+    <title>Email/Chat/SMS spam Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  
+</head>
+  <body>
+
+    <div class = "heading">    
+        <h1> Email/Chat/SMS Spam Detector </h1>
+    </div>
+
+    <div class="form-container1">
+      <form id="predict-form" method="post">
+
+        <label for="chat"> Enter the Chat or Mail: </label>
+        <input type="text" id="chat" name="chat" placeholder="Enter text" required/>
+
+        <button id="btn" formaction="\predict" type="submit">Predict</button>
+        <div class="loader" id="loader"></div>
+
+      </form>
+    </div>
+
+  </body>
+</html>

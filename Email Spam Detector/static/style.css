@@ -1,0 +1,276 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes colorChange {
+    0%{
+        background-color: #3498db;
+    }
+    10%{
+        background-color: #2ecc71;
+    }
+    20%{
+        background-color: #e74c3c;
+    }
+    30%{
+        background-color: #2c3e50;
+    }
+    40%{
+        background-color: #9b59b6;
+    }
+    50%{
+        background-color: #3498db;
+    }
+    60%{
+        background-color: #9b59b6;
+    }
+    70%{
+        background-color: #2c3e50;
+    }
+    80%{
+        background-color: #e74c3c;
+    }
+    90%{
+        background-color: #2ecc71;
+    }
+    100%{
+        background-color: #3498db;
+    }
+}
+@keyframes pastelGlowCycle {
+    0% {
+        background-color: #92b8d9;  
+        color: #1a237e;
+    }
+    10% {
+        background-color: #a488e1;  
+        color: #1b5e20;
+    }
+    20% {
+        background-color: #f5d393;  
+        color: #ff8f00;
+    }
+    30% {
+        background-color: #e77599; 
+        color: #ad1457;
+    }
+    40% {
+        background-color: #a28ae3; 
+        color: #6a1b9a;
+    }
+    50% {
+        background-color: #7ab7eb;
+        color: #0d47a1;
+    }
+    60% {
+        background-color: #987aed;
+        color: #6a1b9a;
+    }
+    70% {
+        background-color: #eb6791;
+        color: #ad1457;
+    }
+    80% {
+        background-color: #eabd69;
+        color: #ff8f00;
+    }
+    90% {
+        background-color: #9f80e1;
+        color: #1b5e20;
+    }
+    100% {
+        background-color: #91c2ed;
+        color: #1a237e;
+    }
+}
+@keyframes lightVibrantCycle {
+    0% {
+        background-color: #b1f3fa;
+    }
+    10% {
+        background-color: #6eff87;
+    }
+    20% {
+        background-color: #ffe066;
+    }
+    30% {
+        background-color: #ff6b9d;
+    }
+    40% {
+        background-color: #c792ea;
+    }
+    50% {
+        background-color: #00e5ff;
+    }
+    60% {
+        background-color: #c792ea;
+    }
+    70% {
+        background-color: #ff6b9d;
+    }
+    80% {
+        background-color: #ffe066;
+    }
+    90% {
+        background-color: #6eff87;
+    }
+    100% {
+        background-color: #00e5ff;
+    }
+}
+@keyframes vibrantCycle {
+    0% {
+        background-color: #121212;
+        color: #00ffff;
+    }
+
+    9.1% {
+        background-color: #121212;
+        color: #39ff14;
+    }
+
+    18.2% {
+        background-color: #0a0a3d;
+        color: #ffea00;
+    }
+
+    27.3% {
+        background-color: #0a0a3d;
+        color: #ff1493;
+    }
+
+    36.4% {
+        background-color: #1a0033;
+        color: #8a2be2;
+    }
+
+    45.5% {
+        background-color: #1a0033;
+        color: #00ffff;
+    }
+
+    54.4% {
+        background-color: #1a0033;
+        color: #8a2be2;
+    }
+
+    63.3% {
+        background-color: #0a0a3d;
+        color: #ff1493;
+    }
+
+    72.2% {
+        background-color: #0a0a3d;
+        color: #ff1493;
+    }
+
+    81.1% {
+        background-color: #0a0a3d;
+        color: #ffea00;
+    }
+
+    91% {
+        background-color: #121212;
+        color: #39ff14;
+    }
+
+    100% {
+        background-color: #1a0033;
+        color: #00ffff;
+    }
+}
+body {
+    animation: fadeIn 1s ease-out, colorChange 3s 0s infinite linear;
+    background-color: paleturquoise;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    animation: slideIn 0.8s ease-out, lightVibrantCycle 1s 0s infinite linear;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    color: #212121;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: auto;
+    margin-top: 100px;
+    font-size: 350%;
+}
+
+label{
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    background-color: #212121;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    width: 10vw;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 150%;
+}
+
+input {
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 10vw;
+    font-size: 150%;
+    animation: slideIn 0.8s ease-out;
+    background-color: rgb(20, 233, 197);
+}
+
+input:hover {
+    color: white;
+    transform: scale(1.1);
+    animation: pulse 1.6s infinite, colorChange 5s 0s infinite linear;    
+}
+
+#btn {
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 100%;
+    color: white;
+    background-color: black;
+}
+
+#btn:hover {
+    color: white;
+    transform: scale(1.1);
+    animation: pulse 1.6s infinite, colorChange 5s 0s infinite linear;
+}
+
+.form-container1 {
+    animation: pastelGlowCycle 5s 0s infinite linear;
+    color: white;
+    align-items: left;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    flex-direction: column;
+    width: 60vw;
+    margin: auto;
+    margin-top: 60px;
+}
