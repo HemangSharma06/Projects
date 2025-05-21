@@ -231,8 +231,8 @@ input {
     margin-bottom: 40px;
     padding: 10px;
     border-radius: 15px;
-    width: 10vw;
-    font-size: 150%;
+    width: 35vw;
+    font-size: 100%;
     animation: slideIn 0.8s ease-out;
     background-color: rgb(20, 233, 197);
 }

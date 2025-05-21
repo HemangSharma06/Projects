@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    android:background="#03A9F4"
+    android:backgroundTint="#03A9F4">
+
+
+    <EditText
+        android:id="@+id/heightft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20sp"
+        android:hint="@string/hint_htf"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heightin"
+        android:ems="10"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:hint="@string/hint_hti" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight"
+        android:ems="10"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:hint="@string/hint_wt" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:backgroundTint="#0E479B"
+        android:id="@+id/bmicalculate"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:text="Result"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="11dp"/>
+
+    <Button
+        android:id="@+id/seeBMI"
+        android:layout_width="243dp"
+        android:layout_height="60dp"
+        android:textSize="25sp"
+        android:backgroundTint="#0E479B"
+        android:layout_marginTop="100dp"
+        android:text="SEE" />
+
+
+</LinearLayout>
