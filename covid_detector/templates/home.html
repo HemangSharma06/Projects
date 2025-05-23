@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Covid Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Covid Detector</h1>
+    </div>
+
+    <div class="form-container1">
+      <form id="predict-form" method="post">
+        <div class="question-container">
+          <label class="Q1">Q1 - Do you have Breathing Problem?</label>
+
+          <select id="Q1" name="Q1">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q2">Q2 - Do you have Fever?</label>
+
+          <select id="Q2" name = "Q2">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q3">Q3 - Do you have Dry cough?</label>
+
+          <select id="Q3" name="Q3">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q4">Q4 - Do you have Sore Throat?</label>
+
+          <select id="Q4" name="Q4">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q5">Q5 - Do you have Running Nose?</label>
+
+          <select id="Q5" name="Q5">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q6">Q6 - Do you have Asthama?</label>
+
+          <select id="Q6" name="Q6">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q7">Q7 - Do you have Chronic Lung Disease?</label>
+
+          <select id="Q7" name="Q7">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q8">Q8 - Do you have Headache?</label>
+
+          <select id="Q8" name="Q8">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q9">Q9 - Do you have Heart Disease?</label>
+
+          <select id="Q9" name="Q9">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q10">Q10 - Do you have Diabities?</label>
+
+          <select id="Q10" name="Q10">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q11">Q11 - Do you have Hyper Tension?</label>
+
+          <select id="Q11" name="Q11">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q12">Q12 - Do you have Fatique?</label>
+
+          <select id="Q12" name="Q12">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q13">Q13 - Do you have Gastrointestinal?</label>
+
+          <select id="Q13" name="Q13">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q14">Q14 - Have you undertaken any international travel?</label>
+
+          <select id="Q14" name="Q14">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q15">Q15 - Have you contact any covid patient?</label>
+
+          <select id="Q15" name="Q15">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q16">Q16 - Have you attended large gathering?</label>
+
+          <select id="Q16" name="Q16">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q17">Q17 - Have you visited public exposed places?</label>
+
+          <select id="Q17" name="Q17">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q18">Q18 - Do you have any family member working in public exposed places?</label>
+
+          <select id="Q18" name="Q18">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q19">Q19 - Do you wear masks regularly?</label>
+
+          <select id="Q19" name="Q19">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+
+          <label class="Q20">Q20 - Have you bought Sanitization from Market?</label>
+
+          <select id="Q20" name="Q20">
+            <option value="" disabled selected>Select</option>
+            <option id="yes" value="1" required>yes</option>
+            <option id="no" value="0" required>No</option>
+          </select>
+        </div>
+
+        <button id="btn" formaction="/predict" type="submit">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

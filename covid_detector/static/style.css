@@ -1,0 +1,241 @@
+body{
+    background-color: #212121;
+}
+
+
+.question-container{
+    border-radius: 30px;
+    background-color: gray; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Q1,
+.Q2,
+.Q3,
+.Q4,
+.Q5,
+.Q6,
+.Q7,
+.Q8,
+.Q9,
+.Q10,
+.Q11,
+.Q12,
+.Q13,
+.Q14,
+.Q15,
+.Q16,
+.Q17,
+.Q18,
+.Q19,
+.Q20{
+    font-size: 250%;
+    background-color: #212121;
+    color: lightgray;
+    padding: 20px;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: colorch 3s 0s linear infinite;
+    border-radius: 100px;
+}
+
+.heading {
+  position: relative;
+    color: lightgray;
+    font-size: 300%;
+    margin-top: 50px;
+    background-color: darkslategray;
+    width: 60%;
+    padding: 20px;
+    border-radius: 100px;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-left: 19.7%;
+    z-index: 1;
+    animation: colorch 3s 0s ease-in-out infinite;
+}
+
+.heading::before {
+  content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 100px;
+    background: linear-gradient(90deg, red, orange, green, blue, red);
+    z-index: -1;
+    padding: 4px;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: border-move 1s ease-in-out infinite;
+}
+
+.heading:hover{
+    color: lightyellow;
+    background-color: black;
+}
+
+#Q1,
+#Q2,
+#Q3,
+#Q4,
+#Q5,
+#Q6,
+#Q7,
+#Q8,
+#Q9,
+#Q10,
+#Q11,
+#Q12,
+#Q13,
+#Q14,
+#Q15,
+#Q16,
+#Q17,
+#Q18,
+#Q19,
+#Q20{
+    border-radius: 15px;
+    padding: 15px;
+    background-color: lightgray;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 150%;
+    background-color: lightblue;
+    color: #212121;
+}
+
+#btn{
+    font-size: 150%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 90%;
+    margin-bottom: 50px;
+    background-color: green;
+    color: #212121 ;
+    padding: 15px;
+    border-radius: 15px;
+    animation: colorch 3s 0s linear infinite;
+}
+
+a{
+    font-size: 80%;
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 82%;
+    margin-bottom: 20px;
+    background-color: green;
+    color: #212121 ;
+    padding: 15px;
+    width: 12vw;
+    border-radius: 15px;
+    animation: colorch 3s 0s linear infinite;
+}
+
+.Q1{
+    margin-top: 50px;
+}
+
+#Q20 {
+    margin-bottom: 50px;
+}
+
+
+@keyframes border-move {
+    0% {
+        background: linear-gradient(0deg, red, orange, green, blue, red);
+    }
+
+    11.11% {
+        background: linear-gradient(40deg, red, orange, green, blue, red);
+    }
+
+    22.22% {
+        background: linear-gradient(80deg, red, orange, green, blue, red);
+    }
+
+    33.33% {
+        background: linear-gradient(120deg, red, orange, green, blue, red);
+    }
+
+    44.44% {
+        background: linear-gradient(160deg, red, orange, green, blue, red);
+    }
+
+    55.55% {
+        background: linear-gradient(200deg, red, orange, green, blue, red);
+    }
+
+    66.66% {
+        background: linear-gradient(240deg, red, orange, green, blue, red);
+    }
+
+    77.77% {
+        background: linear-gradient(280deg, red, orange, green, blue, red);
+    }
+
+    88.88% {
+        background: linear-gradient(320deg, red, orange, green, blue, red);
+    }
+
+    100% {
+        background: linear-gradient(360deg, red, orange, green, blue, red);
+    }
+}
+
+@keyframes colorch {
+    0% {
+        filter: drop-shadow(10px 10px 20px red);
+    }
+
+    15% {
+        filter: drop-shadow(10px 10px 20px orange);
+    }
+
+    30% {
+        filter: drop-shadow(10px 10px 20px yellow);
+    }
+
+    45% {
+        filter: drop-shadow(10px 10px 20px green);
+    }
+
+    60% {
+        filter: drop-shadow(10px 10px 20px blue);
+    }
+
+    75% {
+        filter: drop-shadow(10px 10px 20px indigo);
+    }
+
+    90% {
+        filter: drop-shadow(10px 10px 20px violet);
+    }
+
+    100% {
+        filter: drop-shadow(10px 10px 20px red);
+    }
+}
+
+.result-box{
+    background-color: lightgray;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height: 700px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 300%;
+    color: darkred;
+}
